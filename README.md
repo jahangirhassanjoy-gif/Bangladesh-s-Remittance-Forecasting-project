@@ -39,8 +39,6 @@ itself is sound: **Gradient Boosting achieves R² = +12.6%** there (vs. the naiv
 baseline's −5.7%), proving the engineered features genuinely add value once you're not
 asking a model to predict something completely unprecedented.
 
-> 📖 Full narrative, evidence, and sourcing: [`reports/Remittance_Forecasting_Report.docx`](reports/Remittance_Forecasting_Report.docx), Section 9.
-
 ## 📁 Repository Structure
 
 ```
@@ -121,24 +119,3 @@ python src/03_robustness_check.py
 - **Exchange rate and cash-incentive policy both track formal-channel remittance volume** — consistent with reduced use of informal "hundi" transfer channels
 - **Model forecasts should be trusted in stable periods and heavily discounted during political/economic upheaval** — the single most actionable operating rule this project produced
 
-## ⚠️ Limitations
-
-- Structural breaks (political, policy) are fundamentally unpredictable from historical data alone
-- Only 187 monthly observations — short for capturing multiple full business cycles
-- Tree-based models cannot extrapolate beyond their training range — a real weakness during periods of rapid, unprecedented growth
-- The exchange rate used is the interbank rate, not the effective rate migrants actually received
-
-## 📖 New to Predictive Analytics?
-
-[`docs/Remittance_Forecasting_StudyGuide.pdf`](docs/Remittance_Forecasting_StudyGuide.pdf)
-is a 33-page companion guide that explains **every chart, every metric, and every line
-of code in this repository in plain English** — written for someone who has never taken
-a stats class or opened Python before. It includes a full jargon glossary, a
-block-by-block code walkthrough, and a script for explaining the project to someone
-else.
-
-## 📄 Data Sources & License
-
-Dataset compiled from public Bangladesh Bank sources — see [`data/Sources.xlsx`](data/Sources.xlsx)
-for the complete citation trail and documented modeling caveats. This project (code,
-notebook, report, and study guide) is provided for educational purposes.
